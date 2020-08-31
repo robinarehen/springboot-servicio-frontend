@@ -1,5 +1,5 @@
 {
-  "name": "springboot-servicio-fronted",
+  "name": "springboot-servicio-frontend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

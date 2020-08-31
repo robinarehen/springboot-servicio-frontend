@@ -1,12 +1,10 @@
 # Springboot Servicio Fronted
-
-Proyecto en el cual se implementa el framework de diseño web [Angular Material](https://material.angular.io/) del cual se utilizan los diferentes componentes que este framework ofrece.<br>
-Para el manejo del comportamiento Response se agrega [Bootstrap](https://getbootstrap.com/).<br><br>
-
+Proyecto en el cual se desarrolla el **Fronted** para consumir el servicio de usuarios, donde podremos crear nuevos usuarios con los dos roles ya definidos.
 
 # Instalaciones
 
 ## Angular Material
+Se implementa el framework de diseño web [Angular Material](https://material.angular.io/) del cual se utilizan los diferentes componentes.<br>
 ```
 ng add @angular/material
 ```
