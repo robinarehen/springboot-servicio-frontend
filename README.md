@@ -1,5 +1,5 @@
 # Springboot Servicio Fronted
-Proyecto en el cual se desarrolla el **Fronted** para consumir el servicio de usuarios, donde podremos crear nuevos usuarios con los dos roles ya definidos.
+Proyecto en el cual se desarrolla el **Frontend** para consumir el servicio de usuarios, donde podremos crear nuevos usuarios con los dos roles ya definidos.
 
 # Instalaciones
 

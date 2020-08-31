@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment'
+import { ResponseAuthInterface } from '../interface/login.interface';
 
 const ACCESS_DATA = environment.appAccessData;
+const API_URL = environment.ApiUrl;
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  urlBase = 'http://localhost:8080/api';
+  private AuthInfo: ResponseAuthInterface;
 
   constructor(
     private http: HttpClient
@@ -27,16 +29,21 @@ export class LoginService {
     body.append('password', userPassword);
     body.append('grant_type', 'password');
 
-    let urlEndPoint = `${this.urlBase}/security/oauth/token`;
+    let urlEndPoint = `${API_URL}/security/oauth/token`;
 
-    return this.http.post<any>(urlEndPoint, body.toString(), { headers }).toPromise();
+    return this.http.post<ResponseAuthInterface>(urlEndPoint, body.toString(), { headers }).toPromise();
   }
 
-  saveToken(accessToken: string) {
-    sessionStorage.setItem('accessToken', accessToken)
+  saveToken(dataAuth: ResponseAuthInterface) {
+    this.AuthInfo = dataAuth;
+    sessionStorage.setItem('accessToken', dataAuth.access_token)
   }
 
   deleteToken() {
     sessionStorage.removeItem('accessToken');
+  }
+
+  getAuthInfo() {
+    return this.AuthInfo;
   }
 }

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  appAccessData: 'frontendapp:abc123'
+  appAccessData: 'frontendapp:abc123',
+  ApiUrl: 'http://localhost:8080/api'
 };
 
 /*

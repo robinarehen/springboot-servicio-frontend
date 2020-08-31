@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     this.loading = true;
     this.loginService.getToken(userName.value, userPassword.value)
       .then(data => {
-        this.loginService.saveToken(data.access_token);
+        this.loginService.saveToken(data);
         this.router.navigateByUrl('pages/home');
       }).catch(error => {
         console.log(error.status);
