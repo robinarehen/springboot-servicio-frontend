@@ -13,6 +13,19 @@
                         <strong>ADMIN</strong>: puede consultar, crear, modificar y eliminar usuarios. <br><br>
                         <strong>USER</strong>: puede consultar.
                     </p>
+                    <hr>
+                    <p>
+                        Información del Usuario <br><br>
+                        Nombre: <strong>{{ userInformation.nombre }}</strong> <br>
+                        Apellidos: <strong>{{ userInformation.apellidos }}</strong> <br>
+                        Email: <strong>{{ userInformation.email }}</strong> <br>
+                        Roles: 
+                        <mat-chip-list>
+                            <mat-chip *ngFor="let authority of userInformation.authorities">
+                                {{ authority.replace('ROLE_','')}}
+                            </mat-chip>
+                        </mat-chip-list>
+                    </p>
                 </mat-card-content>
             </mat-card>
         </div>

@@ -9,3 +9,15 @@ export interface ResponseAuthInterface {
     email: string;
     jti: string;
 }
+
+export interface AuthTokenInterface {
+  apellidos?: string;
+  user_name?: string;
+  scope?: string[];
+  exp?: number;
+  nombre?: string;
+  authorities?: string[];
+  jti?: string;
+  email?: string;
+  client_id?: string;
+}

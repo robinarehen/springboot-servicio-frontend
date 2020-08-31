@@ -16,6 +16,12 @@ Se abre el archivo `~/src/index.html` y en el `head` se agrega el siguiente link
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 ```
 
+##  JWT Decode
+Modulo que nos permite decodificar los **JWT** que se genera al realizar el login.
+```
+npm i jwt-decode --save
+```
+
 # Angular Information
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
